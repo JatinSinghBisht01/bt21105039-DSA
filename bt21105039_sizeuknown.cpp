@@ -41,13 +41,14 @@ int BinarySearch(int arr[],int low,int high,int a){
 }
 
 int BinarySearch(int arr[], int a){
-    int low = 0;
+    // creating search space of range[0,1]
+    int low = 0; 
     int high = 1;
 
     while (arr[high] < a)
     {   
-        low = high;
-        high = 2*high;    // doubling the searching space   
+        low = high; //upating low 
+        high = 2*high;    // doubling the search space   
     }
 
     return BinarySearch(arr,low,high,a);
